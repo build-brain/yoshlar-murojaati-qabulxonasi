@@ -1,22 +1,13 @@
-from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardButton, InlineKeyboardMarkup
 
 # Varriables
 # menu button
-btnMainMenu = KeyboardButton('MainMenu')
-# other buttons
-btnLanguige = KeyboardButton('Languige')
-# # button button
-# btnButton_informations = KeyboardButton('Button_informations')
+Languige = InlineKeyboardMarkup(row_width=2)
+btnUzbek = InlineKeyboardButton(text="Uzbek", callback_data="btnUzbek")
+btnRussian = InlineKeyboardButton(text="Russian", callback_data="btnRussian")
 
-# languige guttones
-btnButton_Russian = KeyboardButton(text)()('Russian')
-btnButton_Uzbek = KeyboardButton(text)(text)('Uzbek')
 
-# Main menu
-MainMenu = ReplyKeyboardMarkup(resize_keyboard = True).add(btnLanguige)
 
-# Other menu
-Languige = ReplyKeyboardMarkup(resize_keyboard = True).add(btnButton_Russian, btnButton_Uzbek)
+Languige.insert(btnUzbek)
+Languige.insert(btnRussian)
 
-# # BuildBrain menu
-# Button_informations = ReplyKeyboardMarkup(resize_keyboard = True).add(btnMainMenu)
