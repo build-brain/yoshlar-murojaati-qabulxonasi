@@ -1,1 +1,1 @@
-# Yoshlar Murojati Qabulxonasi
+# Yoshlar Murojaati Qabulxonasi
