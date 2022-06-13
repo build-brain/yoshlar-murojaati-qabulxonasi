@@ -6,6 +6,8 @@ from aiogram import Bot, Dispatcher, executor, types
 import MyButtons
 import random
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardButton, InlineKeyboardMarkup
+from aiogram.types.message import ContentTypes
+from aiogram.types.message import ContentTypes
 
 API_TOKEN = '5242807366:AAF8pFlM3ecs83tdb-o3ExgrOhUzk36k9Uc'
 
@@ -24,12 +26,12 @@ async def send_welcome(message: types.Message):
   await bot.send_message(message.from_user.id, "for start /start\n for help /help\n for stop /stop!")
   
 #bot.py
-@dp.callback_query_handler(text="btnUzbek, btnRussian")
+@dp.callback_query_handler(text_contains="leng")
 async def LanguigeUzRus(message: types.Message):
-  argument = message.get_args()
-  if argument == btnUzbek:
+  if message.text == btnUzbekleng:
+    # @btnUzbek
     async def name1(message: types.Message):
-      await bot.send_message(message.from_user.id, 'Iltimos ismingizni kiriting')
+      await bot.send_message(message.from_user.id, "Iltimos ismingizni kiriting")
       name = name1()
       await bot.send_message(message.from_user.id, 'Sizning ismingiz ' + name + 'tugrimi ?')
       async def phone1(message: types.Message):
@@ -47,7 +49,8 @@ async def LanguigeUzRus(message: types.Message):
             async def text1(message: types.Message):
               await bot.send_message(message.from_user.id, 'Iltimos ' + name + ' murojatingizni kiriting')
               text = text1()
-  elif argument == btnRussian:
+  elif message.text == btnRussianleng:
+    # @btnRussian
     async def name1(message: types.Message):
       await bot.send_message(message.from_user.id, 'Пожалувсто введите свое имя')
       name = name1()

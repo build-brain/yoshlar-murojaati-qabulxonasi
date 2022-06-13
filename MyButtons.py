@@ -3,11 +3,11 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardBut
 # Varriables
 # menu button
 Languige = InlineKeyboardMarkup(row_width=2)
-btnUzbek = InlineKeyboardButton(text="Uzbek", callback_data="btnUzbek")
-btnRussian = InlineKeyboardButton(text="Russian", callback_data="btnRussian")
+btnUzbekleng = InlineKeyboardButton(text="Uzbekleng", callback_data="btnUzbekleng")
+btnRussianleng = InlineKeyboardButton(text="Russianleng", callback_data="btnRussianleng")
 
 
 
-Languige.insert(btnUzbek)
-Languige.insert(btnRussian)
+Languige.insert(btnUzbekleng)
+Languige.insert(btnRussianleng)
 
