@@ -1,1 +1,1 @@
-# Jasurbek-Tursunov-yoshlar-murojati-qabulxonasi
+# Yoshlar Murojati Qabulxonasi
